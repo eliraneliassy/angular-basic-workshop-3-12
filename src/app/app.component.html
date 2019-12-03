@@ -1,3 +1,13 @@
+<div class="shopping-cart">
+  <app-item *ngFor="let item of shoppingCart" [item]="item">
+
+  </app-item>
+
+</div>
+<app-item *ngFor="let item of db" [item]="item" (addToCart)="addToCart($event)">
+
+</app-item>
+
 
 
 <router-outlet></router-outlet>

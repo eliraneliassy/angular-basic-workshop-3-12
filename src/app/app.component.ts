@@ -8,9 +8,14 @@ import { db } from './db';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  item: Item = db[0];
 
-  constructor() {
-    console.log(this.item);
+  db: Item[] = db;
+  shoppingCart: Item[] = [];
+  addToCart(item: Item) {
+    this.shoppingCart.push(item);
+    console.log(this.shoppingCart);
   }
+
+
+
 }
