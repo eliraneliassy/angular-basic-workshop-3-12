@@ -1,4 +1,6 @@
+import { Item } from './item.interface';
 import { Component } from '@angular/core';
+import { db } from './db';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-basic-workshop';
+  item: Item = db[0];
+
+  constructor() {
+    console.log(this.item);
+  }
 }
